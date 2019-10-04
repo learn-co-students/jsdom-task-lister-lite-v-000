@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         renderApp();
       }
     });
-  ;
+  
   
 
 
