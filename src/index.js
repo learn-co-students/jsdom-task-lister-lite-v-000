@@ -14,8 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const renderApp = () => (taskUl.innerHTML = taskList.renderTasks());
     //attach event listeners
   
-    newTaskForm.addEventListener("submit", (e) => {
-      e.preventDefault();
+  newTaskForm.addEventListener("click", (e) => {
+      console.log("dummy message")
+    e.preventDefault();
+    debugger
       taskList.createNewTask(newTaskDescription.value);
       // reset form
       e.target.reset();
