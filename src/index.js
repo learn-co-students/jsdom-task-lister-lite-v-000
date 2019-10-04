@@ -32,7 +32,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	taskUI.addEventListener("click", (e) => {
 	if(e.target.nodeName ==="BUTTON"){
+
+	//REMIND: HOw to use debugger and Xpath!!
+
 	debugger;
+
+	
 	let xpath = `//li[contains(text(),\'${e.target.dataset.description}\')]`; 
 
 	let matchingElement = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
