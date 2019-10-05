@@ -35,3 +35,10 @@ button {
   border-radius: 5px;
   box-shadow: 2px 5px 5px #333;
 }
+
+.complete {
+  display: inline-block;
+  margin-left: 5px;
+  background-color: lightgreen;
+  vertical-align: middle;
+}
