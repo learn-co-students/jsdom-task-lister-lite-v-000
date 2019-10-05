@@ -4,7 +4,7 @@ class TaskList {
     }
 
 
-//  Create a new Task.. To use in index,js.
+//  Create a new Task.. To use in
     createNewTask(description) {
         const newTask = new TaskList(description);
         this.tasks.push(newTask);
@@ -20,3 +20,18 @@ class TaskList {
     }
 
 }
+
+// class Task{
+//     constructor(description) {
+//         this.description = description;
+//     }
+
+//     render() {
+//         return `
+//          <li>
+//           ${this.description}
+//           <button data-description="${this.description}">X</button>
+//          </li>
+//         `
+//     }
+// }
