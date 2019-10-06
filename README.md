@@ -24,7 +24,7 @@ behavior visually in the browser.
 
 You've been provided with a basic HTML file, as well as a `src/index.js` file
 where you can implement your solution. Focus on getting the feature working
-while using your knowledge to write readable, maintainable code. 
+while using your knowledge to write readable, maintainable code.
 
 ## Deliverables:
 
@@ -36,7 +36,7 @@ while using your knowledge to write readable, maintainable code.
 
 ## Squelch a Default Action with `Event.preventDefault`
 
-The deliverables require you to handle an event in a form based on clicking a submit button. You're going to need to listen for a `submit` event on the `<form>` element. 
+The deliverables require you to handle an event in a form based on clicking a submit button. You're going to need to listen for a `submit` event on the `<form>` element.
 
 By default, Form elements automatically submit the form, which redirects the browser to a new url. This _is not_ the experience we want to build in this lab. We want to _prevent_ that event from performing its _default_ behavior (submitting the form), because ***we*** want to update the DOM using JavaScript. In order to _prevent_ the _default_ behavior of the
 `submit` event, when our handler "sees" the event, it needs to invoke the `preventDefault()` method on it.
