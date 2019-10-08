@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const createNewTask = event => {
+
+  //prevent from submitting form
   event.preventDefault();
 
   const newTaskDescription = document.getElementById('new-task-description');
@@ -19,6 +21,8 @@ const createNewTask = event => {
   newTask.innerHTML = newTaskDescription.value;
 
   appendNewTask(newTask);
+
+  //reset input field
   event.target.reset();
 }
 
