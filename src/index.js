@@ -22,7 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
     tasks.appendChild(listItem); // inserts the <li> into the <ul>
     form.reset(); // clears the input field
   });
-
+  
+  /* 
+    when any element is click on within the list the event listener is fired
+    if the 'x' was clicked it will erased the <li> from the list
+    if the checkbox was checked it will add a class to the <li> element that would cause CSS to decorate the task
+    if the checkbox was unchecked it would change the class name
+    once completed focus is returned back to the input field.
+  */
   tasks.addEventListener('click',function(event){
     let listItem = event.target.parentNode;
     if (event.target.className == "close"){
