@@ -35,3 +35,14 @@ button {
   border-radius: 5px;
   box-shadow: 2px 5px 5px #333;
 }
+
+/* decorates the list item when completed  */
+.checked{
+  text-decoration: line-through;
+}
+#tasks{
+  list-style-type: none;
+}
+.checkbox, .close{
+  margin:8px;
+}
