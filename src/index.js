@@ -1,24 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  let input = document.getElementById("new-task-description");
-  let form = document.getElementById("create-task-form");
+  const taskForm = document.getElementById("create-task-form");
 
-  form.addEventListener("submit", addTasktoList);
+  taskForm.addEventListener("submit", addTaskToList);
+
+  });
+
 
   const addTaskToList = event => {
     event.preventDefault();
 
-    let li = document.createElement('li');
+    const listItem = document.createElement("li");
+    const taskInput = document.getElementById("new-task-description");
 
-    li.innerText = input.value;
+    listItem.innerText = taskInput.value;
 
-    appendNewTask(li);
+    appendNewTask(listItem);
     event.target.reset();
   };
 
   const appendNewTask = task => {
     document.getElementById("tasks").appendChild(task);
   };
-
-
-});
