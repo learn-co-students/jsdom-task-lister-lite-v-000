@@ -1,21 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
   // your code here
 
-  document.getElementById('create-task-form').addEventListener("submit", function(event) {
-    let list = document.getElementById('tasks');
-    let element = document.createElement('li');
-    let item = document.getElementById("new-task-description");
-    let tasks = document.querySelectorAll('div#list ul li button');
+  let tasks = document.getElementById('tasks');
+  let item = document.getElementById("new-task-description");
+  let unorderedList = document.querySelector('div#list ul');
 
-    element.innerHTML = `${item.value} <button data-description="${item.value}">x</button>`;
-    list.appendChild(element);
+  document.getElementById('create-task-form').addEventListener("submit", function(event) {
+    let element = document.createElement('li');
+    element.innerHTML = `${item.value} <button>x</button>`;
+    tasks.appendChild(element);
     item.value = "";
     event.preventDefault();
   });
 
-  tasks.addEventListener('click', function(event) {
+  unorderedList.addEventListener('click', function(event) {
+    const li = event.toElement.tagName;
     const comment = event.target.parentElement
-    comment.remove();
+    if (li === "BUTTON") {
+      comment.remove();
+    };
   });
 
 });
