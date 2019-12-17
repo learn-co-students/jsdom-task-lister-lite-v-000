@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   // your code here
 
-  let tasks = document.getElementById('tasks');
-  let item = document.getElementById("new-task-description");
-  let unorderedList = document.querySelector('div#list ul');
+  const tasks = document.getElementById('tasks');
+  const item = document.getElementById("new-task-description");
+  const unorderedList = document.querySelector('div#list ul');
 
   document.getElementById('create-task-form').addEventListener("submit", function(event) {
     let element = document.createElement('li');
