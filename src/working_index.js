@@ -18,31 +18,18 @@ document.addEventListener("DOMContentLoaded", () => {
     newTask.appendChild(spawnDeleteButton());
     document.getElementById("tasks").appendChild(newTask);
 
-    //adding the dropdown menu
-    newTask.appendChild(spawnDropdownMenu());
-    document.getElementById("tasks").appendChild(newTask);
-
     form.reset();
   }
 
   function spawnDeleteButton() {
     let nuButton = document.createElement('button');
     nuButton.innerHTML = "delete";
-    nuButton.addEventListener("click", deleteToDoItem);
+    nuButton.addEventListener("click", deleteToDoItem)
     return nuButton;
   }
 
   // A delete function that will remove tasks from your list
   function deleteToDoItem() {
     document.getElementById("tasks").removeChild(this.parentElement)
-  }
-
-  // a dropdown menu for red, yellow, or green text
-  // I can't get this to work right now so I'm moving on to other taskings
-  function spawnDropdownMenu() {
-    let nuMenu = document.createElement('select');
-    nuMenu.innerHTML = "select a color";
-    //nuButton.addEventListener("select", deleteToDoItem);
-    return nuMenu;
   }
 });
