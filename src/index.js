@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // your code here
 
   document.getElementById('create-task-form').addEventListener("submit", function(event) {
-    let items = document.getElementById('tasks');
+    let list = document.getElementById('tasks');
     let element = document.createElement('li');
     let item = document.getElementById("new-task-description");
     let tasks = document.querySelectorAll('div#list ul li button');
