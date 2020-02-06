@@ -4,5 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector('#submit').addEventListener("click", function(event) {
     
     event.preventDefault();
+    
   }, false);
 });
