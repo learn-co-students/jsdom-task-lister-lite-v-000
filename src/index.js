@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const task = document.createElement('li');
     task.textContent = taskDescription.value + " ";
 
-    /* Create the and append the delete button.
+    /* Create and append the delete button.
     const deleteButton = document.createElement('button');
     deleteButton.setAttribute("data-description", taskDescription.value);
     deleteButton.textContent = "Delete Task";
@@ -41,3 +41,13 @@ document.addEventListener("DOMContentLoaded", () => {
 // "Delete Task" is one of the <ul id="tasks"><li><button>Delete Task</button></li></ul> elements.
 // I want to delete whichever <li> has the button that was clicked on.
 // This is WAY harder to do than I thought.
+
+/* This didn't work, either:
+
+  tasks.querySelectorAll('li button').forEach(
+    deleteButton => deleteButton.AddEventListener('click', function() {
+      this.parentElement.remove();
+    }).bind(deleteButton)
+  );
+  
+*/
