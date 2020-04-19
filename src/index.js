@@ -13,8 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     deleteButton.setAttribute("data-description", taskDescription.value);
     deleteButton.textContent = "Delete Task";
     
-    task.appendChild(deleteButton); // Add the delete button to the task.
-    */
+    task.appendChild(deleteButton); // Add the delete button to the task. */
 
     tasks.appendChild(task); // Add the task to the TODO List.
     
@@ -29,11 +28,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("submit", updateTasks, false);
 
-  /* tasks.querySelectorAll('li button').forEach(
+  /* None of this works:
+
+    tasks.querySelectorAll('li button').forEach(
+      delButton => delButton.AddEventListener('click', function () {
+        this.parentElement.remove();
+      })
+    );
+
+    tasks.querySelectorAll('li button').forEach(
       deleteButton => deleteButton.AddEventListener('click', function(e) {
         e.target.parentElement.remove();
       })
-    ); None of this works. 
+    );
   */
 });
 
@@ -49,5 +56,5 @@ document.addEventListener("DOMContentLoaded", () => {
       this.parentElement.remove();
     }).bind(deleteButton)
   );
-  
+
 */
