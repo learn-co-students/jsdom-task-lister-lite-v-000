@@ -1,60 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById('create-task-form');
   const taskDescription = document.getElementById('new-task-description');
-  const tasks = document.getElementById('tasks');
+  
+  function addTasks (event) {
+    const task = document.createElement('li'); // Create a task.
 
-  function updateTasks (event) {
-    // Create the task.
-    const task = document.createElement('li');
     task.textContent = taskDescription.value + " ";
 
-    /* Create and append the delete button.
+    // Create the delete button for the task.
     const deleteButton = document.createElement('button');
     deleteButton.setAttribute("data-description", taskDescription.value);
     deleteButton.textContent = "Delete Task";
     
-    task.appendChild(deleteButton); // Add the delete button to the task. */
+    // Add an event listener for deleting the task. THIS is where that functionality belongs!
+    // For future reference, I think it's a good idea to add event listeners to tasks as they are being created.
+    deleteButton.addEventListener('click', function () { task.remove(); });
 
+    task.appendChild(deleteButton); // Add the delete button to the task. 
     tasks.appendChild(task); // Add the task to the TODO List.
     
     taskDescription.value = ""; // Reset the taskDescription input.
-
     event.preventDefault(); // Prevent the form from submitting to another page.
-  }
+  } // End of updateTasks
 
-  // function deleteTask (event) { // Delete the entire list item/task.
-  //   event.target.parentNode.remove();
-  // } This doesn't work.
-
-  form.addEventListener("submit", updateTasks, false);
-
-  /* None of this works:
-
-    tasks.querySelectorAll('li button').forEach(
-      delButton => delButton.AddEventListener('click', function () {
-        this.parentElement.remove();
-      })
-    );
-
-    tasks.querySelectorAll('li button').forEach(
-      deleteButton => deleteButton.AddEventListener('click', function(e) {
-        e.target.parentElement.remove();
-      })
-    );
-  */
+  form.addEventListener("submit", addTasks, false);
 });
-
-// When the user clicks "Delete Task", I want to delete that task.
-// "Delete Task" is one of the <ul id="tasks"><li><button>Delete Task</button></li></ul> elements.
-// I want to delete whichever <li> has the button that was clicked on.
-// This is WAY harder to do than I thought.
-
-/* This didn't work, either:
-
-  tasks.querySelectorAll('li button').forEach(
-    deleteButton => deleteButton.AddEventListener('click', function() {
-      this.parentElement.remove();
-    }).bind(deleteButton)
-  );
-
-*/
