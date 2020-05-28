@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Flatiron Task Lister</title>
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -10,8 +11,12 @@
     <h1>Task Lister Lite™️</h1>
 
     <form id="create-task-form" action="#" method="post">
-      <label for="new-task-description">Task description:</label>
+      <label for="new-task-description">Task Description:</label>
       <input type="text" id="new-task-description" name="new-task-description" placeholder="description">
+      <br>
+      <label for="new-task-due-date">Task Due Date:</label>
+      <input type="text" id="new-task-due-date" name="new-task-due-date" placeholder="due date">
+      <br>
       <input type="submit" value="Create New Task">
     </form>
 

@@ -7,7 +7,7 @@ html {
 body {
   min-height: 100%;
   min-width: 100%;
-  background: linear-gradient(pink, violet);
+  background: linear-gradient(yellow, red);
 }
 
 button {
@@ -27,6 +27,14 @@ button {
   box-shadow: 2px 5px 5px #333;
 }
 
+#create-task-form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 #list {
   margin: 10px;
   border: 1px solid #333;
@@ -34,4 +42,12 @@ button {
   padding: 15px 20px 18px 18px;
   border-radius: 5px;
   box-shadow: 2px 5px 5px #333;
+}
+
+#tasks {
+  color: red;
+}
+
+h1 {
+  color: red;
 }
