@@ -30,3 +30,10 @@ function addToList(task){
   list.appendChild(item);
 
 }
+
+// function removeTask(task) {
+//   var ul = document.getElementById('tasks');
+//   var item = document.getElementById('li')
+//   ul.removeChild(item);
+//
+// }
