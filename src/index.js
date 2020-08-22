@@ -1,10 +1,6 @@
-// document.addEventListener("DOMContentLoaded", "click" function () => {
-document.addEventListener("click", function (event) {
-  document.getElementById("submit").event;
-  event.preventDefault();
-  // your code here
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector("form#create-task-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    console.log("Is this working?")
+  }
 });
-// document.getElementById("submit").addEventListener("click", function (event) {
-//   document.getElementById("output-box").innerHTML += "Sorry! <code>preventDefault()</code> won't let you check this!<br>";
-//   event.preventDefault();
-// }
