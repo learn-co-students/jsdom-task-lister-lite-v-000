@@ -35,3 +35,14 @@ button {
   border-radius: 5px;
   box-shadow: 2px 5px 5px #333;
 }
+
+#list ul li{
+  list-style-type: none;
+}
+
+#close {
+  float:right;
+  display:inline-block;
+  padding:2px 5px;
+  background:#ccc;
+}
