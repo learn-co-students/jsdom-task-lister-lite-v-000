@@ -5,8 +5,6 @@ html {
 }
 
 body {
-  min-height: 100%;
-  min-width: 100%;
   background: linear-gradient(pink, violet);
 }
 
@@ -34,4 +32,8 @@ button {
   padding: 15px 20px 18px 18px;
   border-radius: 5px;
   box-shadow: 2px 5px 5px #333;
+}
+
+button.delete {
+  margin-left: 5px;
 }
