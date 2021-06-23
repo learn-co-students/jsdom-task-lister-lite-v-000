@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function()  {
   // your code here
-  addTask()
-});
+  addTask();
+})
 
 function addTask() {
   const form  = document.getElementById("create-task-form");
@@ -12,6 +12,6 @@ function addTask() {
     const elItem = document.createElement("li");
     elItem.innerText = task;
     elList.appendChild(elItem);
-  } ; 
-};
+  })  
+}
 
